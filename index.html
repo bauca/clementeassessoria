@@ -1,121 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Site em Manutenção | Clemente Assessoria Imobiliária</title>
-
-  <!-- Atualiza a página após 15 minutos (900 segundos) -->
-  <meta http-equiv="refresh" content="900">
-
-  <style>
-    :root {
-      --color-primary: #B39533; /* dourado */
-      --color-secondary: #6B6357; /* cinza-ameixa */
-      --bg-color: #F7F7F7;       /* fundo claro */
-    }
-
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--color-secondary);
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      text-align: center;
-      padding: 20px;
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      width: 50%;
-      max-width: 720px;
-      height: auto;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      line-height: 1.4;
-    }
-
-    .btn-contato {
-      display: inline-block;
-      text-decoration: none;
-      background: var(--color-primary);
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: filter 0.2s;
-    }
-
-    .btn-contato:hover {
-      filter: brightness(0.9);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.85rem;
-      color: var(--color-secondary);
-      position: relative;
-    }
-
-    /* Responsividade */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      .btn-contato {
-        padding: 10px 20px;
-      }
-      .container {
-        padding: 15px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clemente Assessoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Define custom colors based on the provided palette */
+        :root {
+           --color-primary: #B39533; /* dourado */
+           --color-secondary: #6B6357; /* cinza-ameixa */
+           --bg-color: #F7F7F7;       /* fundo claro */
+        }
+        /* Apply custom background color to body */
+        body {
+            background-color: var(--bg-color);
+        }
+        /* Style for the title underline using the primary color */
+        .title-underline {
+            border-bottom: 4px solid var(--color-primary);
+        }
+        /* Style for heading accents using the primary color */
+        .heading-accent {
+           color: var(--color-primary);
+           border-left-color: var(--color-primary);
+        }
+        /* Style for list checkmarks using the primary color */
+        .checkmark-accent {
+            color: var(--color-primary);
+        }
+        /* Style for secondary text color */
+        .text-secondary {
+            color: var(--color-secondary);
+        }
+        /* Style for footer background using the secondary color */
+        .bg-secondary {
+             background-color: var(--color-secondary);
+        }
+        /* Explicitly set header background */
+        .header-bg {
+             background-color: var(--bg-color);
+        }
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: filter 0.2s;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <img src="logo.jpeg" alt="Clemente Assessoria Imobiliária" class="logo">
+<body class="text-gray-800">
 
-    <h1>Estamos em manutenção<br/>Volte em breve!</h1>
-    <p>
-      No momento nossa plataforma está sendo atualizada para melhor atendê-lo.<br/>
-      Desculpe o transtorno e obrigado pela compreensão.
-    </p>
+    <header class="text-center header-bg shadow-sm mb-8 md:mb-12">
+        <div class="container mx-auto px-4">
+            <img src="logo.jpeg"
+                 alt="Clemente Assessoria Logo"
+                 class="h-48 md:h-48 w-auto mx-auto mb-4 rounded">
+        </div>
+    </header>
 
-    <a href="https://api.whatsapp.com/send?phone=+553299992797&text=Olá, gostaria de saber mais sobre seus serviços." class="btn-contato">
-      Fale conosco
+    <main class="container mx-auto px-4 pb-12">
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12">
+
+            <aside class="w-full md:w-1/3 flex flex-col items-center md:items-start gap-6">
+                <img src="casa_money.png"
+                     alt="Financiamento Imobiliário"
+                     class="w-full max-w-xs md:max-w-full rounded-lg shadow-md object-cover"
+                     >
+            </aside>
+
+            <section class="w-full md:w-2/3">
+                <h2 class="text-2xl md:text-3xl font-semibold text-secondary mb-6">
+                    Clemente Assessoria
+                </h2>
+
+                <article class="mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-3 border-l-4 pl-3 heading-accent">
+                        Quem Somos
+                    </h3>
+                    <p class="text-secondary leading-relaxed mb-3">
+                        A Clemente Assessoria é uma empresa especializada em serviços de
+                        correspondente bancário e despachante imobiliário, com atuação desde
+                        2009. Nosso foco é oferecer suporte completo em operações de crédito
+                        imobiliário, regularização e transferência de imóveis, sempre com agilidade,
+                        precisão e atendimento personalizado.
+                    </p>
+                    <p class="text-secondary leading-relaxed">
+                        Contamos com uma equipe capacitada e comprometida em transformar
+                        processos burocráticos em experiências simples, eficientes e seguras para
+                        nossos clientes.
+                    </p>
+                </article>
+
+                <article class="mb-6">
+                     <h3 class="text-xl md:text-2xl font-semibold mb-3 border-l-4 pl-3 heading-accent">
+                        Missão
+                    </h3>
+                     <p class="text-secondary leading-relaxed">
+                        Descomplicar processos bancários e imobiliários, oferecendo soluções
+                        ágeis, seguras e personalizadas, com foco total na tranquilidade e
+                        satisfação do cliente.
+                    </p>
+                </article>
+
+                <article class="mb-6">
+                     <h3 class="text-xl md:text-2xl font-semibold mb-3 border-l-4 pl-3 heading-accent">
+                        Visão
+                    </h3>
+                     <p class="text-secondary leading-relaxed">
+                        Ser referência em reestruturação financeira no Brasil, promovendo um
+                        mercado mais justo e acessível.
+                    </p>
+                </article>
+
+                <article>
+                     <h3 class="text-xl md:text-2xl font-semibold mb-4 border-l-4 pl-3 heading-accent">
+                        Valores
+                    </h3>
+                    <ul class="list-none space-y-3 pl-4">
+                        <li class="flex items-start">
+                            <span class="checkmark-accent mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="font-medium text-gray-800">Ética e transparência:</strong>
+                                <span class="text-secondary"> A base de todas as nossas relações.</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="checkmark-accent mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="font-medium text-gray-800">Foco no cliente:</strong>
+                                <span class="text-secondary"> Escutamos, compreendemos e entregamos a melhor solução.</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="checkmark-accent mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="font-medium text-gray-800">Comprometimento:</strong>
+                                <span class="text-secondary"> Cuidamos de cada demanda com atenção, responsabilidade e respeito aos prazos.</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="checkmark-accent mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="font-medium text-gray-800">Eficiência:</strong>
+                                <span class="text-secondary"> Buscamos constantemente a melhoria de processos para maior agilidade e qualidade na entrega.</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="checkmark-accent mr-2 mt-1">&#10004;</span>
+                           <div>
+                                <strong class="font-medium text-gray-800">Atualização constante:</strong>
+                                <span class="text-secondary"> Atuamos de forma alinhada às normas legais e regulatórias, principalmente às exigências da Caixa Econômica Federal e demais instituições do setor.</span>
+                           </div>
+                        </li>
+                    </ul>
+                </article>
+                <div class="mt-6 text-center">
+                    <a href="https://api.whatsapp.com/send?phone=+553299992797&text=Olá, gostaria de saber mais sobre seus serviços." class="btn-primary">
+                        Entre em Contato
+                    </a>
+                </div>
+                    <!-- Floating Contact Button -->
+    <a href="https://api.whatsapp.com/send?phone=+553299992797&text=Olá, gostaria de saber mais sobre seus serviços." class="fixed bottom-6 right-6 bg-[var(--color-primary)] hover:opacity-90 text-white rounded-full p-4 shadow-lg z-50">
+        📞
     </a>
-  </div>
 
-  <footer>© 2025 Clemente Assessoria Imobiliária</footer>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-gray-100 text-center py-4 mt-12">
+        <p>Razão Social: Clemente Assessoria Em Finanças E Serviços LTDA / CNPJ: 45.932.669/0001-50</p>
+        <p>Rua Santa Rita 454, SL 203 Centro - Juiz de Fora/MG - CEP: 36.010-071</p>
+        <p>&copy; 2025 Clemente Assessoria - Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
